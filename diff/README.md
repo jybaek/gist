@@ -1,7 +1,7 @@
-# usage
+### summary
+Finds different parts in the two files.
 
-### Finds different parts in the two files.
-
+### usage
     % diff.sh filename1 filename2
 
 	% ./diff.sh  text1 text2 
