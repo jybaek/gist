@@ -33,7 +33,7 @@ function get_issue()
 	$obj_cnt = count($obj);
 
 	for ($i = 0; $i < $obj_cnt; $i++) {
-		if ($obj[$i]->{'pull_request'} || !$obj[$i]->{'title'})
+		if (isset($obj[$i]->{'pull_request'}) || !$obj[$i]->{'title'})
 			continue;
 
 		/* XXX. To add another object edit here. */
@@ -64,6 +64,9 @@ function get_pageCount()
 	$header = explode("\r\n", $header);
 
 	for ($i = 0; $i < count($header); $i++) {
+		if (strpos($header[$i], ":") === false)
+			continue;
+
 		list($key, $value) = explode(":", $header[$i], 2);
 
 		if ($key != "Link") 
