@@ -1,8 +1,10 @@
 <?php
+
+$enable_auth = 0;
 $user = "id";		/* auth id */
 $password = "pwd";	/* auth password */
 
-$github_target = "target_id"; /* target id */
+$github_target = "target_id"; 	/* target id */
 $github_repo = "target_repo"; 	/* target repository */
 
 $idx = 1;
@@ -10,9 +12,12 @@ function set_default_opt(&$ch, $url)
 {
 	global $user;
 	global $password;
+	global $enable_auth;
+
 	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36");
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-	curl_setopt($ch, CURLOPT_USERPWD, "$user:$password");
+	if ($enable_auth)
+		curl_setopt($ch, CURLOPT_USERPWD, "$user:$password");
 	curl_setopt($ch, CURLOPT_URL, $url);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 }
@@ -49,6 +54,7 @@ function get_pageCount()
 {
 	global $github_target;
 	global $github_repo;
+	$page = 0;
 
 	$ch = curl_init();
 	$url = "https://api.github.com/repos/$github_target/$github_repo/issues?state=all";
