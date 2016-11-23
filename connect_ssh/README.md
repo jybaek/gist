@@ -14,3 +14,5 @@
 <div style="width:50%; margin:auto; margin-bottom:10px; margin-top:20px;">
 <img style="width:100%" src="image2.png">
 </div>
+
+선택하면 자동으로 접속됩니다. 
