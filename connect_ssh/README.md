@@ -4,9 +4,10 @@
 
 ## usage
     $ connect_ssh
-	<div style="width:50%; margin:auto; margin-bottom:10px; margin-top:20px;">
-	<img style="width:100%" src="image1.png">
-	</div>
-	<div style="width:50%; margin:auto; margin-bottom:10px; margin-top:20px;">
-	<img style="width:100%" src="image2.png">
-	</div>
+  
+<div style="width:50%; margin:auto; margin-bottom:10px; margin-top:20px;">
+<img style="width:100%" src="image1.png">
+</div>
+<div style="width:50%; margin:auto; margin-bottom:10px; margin-top:20px;">
+<img style="width:100%" src="image2.png">
+</div>
