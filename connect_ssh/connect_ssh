@@ -34,7 +34,7 @@ conn_ssh()
 	expect -c "spawn ssh ${ID}@${SERVER}"\
 	-c "expect -re \"\(yes/no\)? \"" \
 	-c "send \"yes\r\"" \
-	-c "expect -re \"password:\"" \
+	-c "expect -re \"password\"" \
 	-c "send \"${PWD}\r\"" \
 	-c "interact"
 }
