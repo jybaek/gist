@@ -196,6 +196,15 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>form_mailserver</tabstop>
+  <tabstop>form_ehlo</tabstop>
+  <tabstop>form_mailfrom</tabstop>
+  <tabstop>form_rcptto</tabstop>
+  <tabstop>form_subject</tabstop>
+  <tabstop>form_data</tabstop>
+  <tabstop>pushButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
