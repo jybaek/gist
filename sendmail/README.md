@@ -1,7 +1,6 @@
 ## summary
-E-Mail Àü¼Û ÇÁ·Î±×·¥
 
 ## usage
-°³¹ßÁß..
+Â°Â³Â¹ÃŸÃÃŸ..
 
     $ python mail-attack.py
