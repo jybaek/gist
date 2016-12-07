@@ -12,7 +12,7 @@ sendmail examples: https://docs.python.org/2/library/email-examples.html
 class form(QtGui.QMainWindow):
     def __init__(self):
         super(form, self).__init__()
-        self.ui = uic.loadUi('attack-mail.ui', self)
+        self.ui = uic.loadUi('measure.ui', self)
         self.show()
 
         self.connect(self.ui.pushButton, QtCore.SIGNAL("clicked()"), self.sendmail)
