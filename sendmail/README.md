@@ -1,5 +1,5 @@
 ## summary
-E-Mail 전송 프로그램
+E-Mail measure
 
 ## usage
 ing...
