@@ -112,7 +112,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox_3">
+   <widget class="QSpinBox" name="form_mailfrom_start">
     <property name="geometry">
      <rect>
       <x>470</x>
@@ -147,7 +147,7 @@
      <string>~</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox_4">
+   <widget class="QSpinBox" name="form_mailfrom_end">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -195,7 +195,7 @@
      <string>~</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="form_mailfrom_3">
+   <widget class="QLineEdit" name="form_rcptto">
     <property name="geometry">
      <rect>
       <x>112</x>
@@ -208,7 +208,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox_5">
+   <widget class="QSpinBox" name="form_rcptto_start">
     <property name="geometry">
      <rect>
       <x>470</x>
@@ -230,7 +230,7 @@
      <number>420000000</number>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox_6">
+   <widget class="QSpinBox" name="form_rcptto_end">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -265,7 +265,7 @@
      <string>:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="form_ehlo_2">
+   <widget class="QLineEdit" name="form_mailserver_port">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -288,7 +288,7 @@
      <string>Reply-to</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="form_mailfrom_4">
+   <widget class="QLineEdit" name="form_replyto">
     <property name="geometry">
      <rect>
       <x>111</x>
@@ -301,7 +301,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="form_mailfrom_inc_2">
+   <widget class="QCheckBox" name="form_replyto_auto">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -317,7 +317,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="form_mailfrom_5">
+   <widget class="QLineEdit" name="form_returnpath">
     <property name="geometry">
      <rect>
       <x>111</x>
@@ -330,7 +330,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="form_mailfrom_inc_3">
+   <widget class="QCheckBox" name="form_returnpath_auto">
     <property name="geometry">
      <rect>
       <x>392</x>
@@ -359,7 +359,7 @@
      <string>Return-path</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QSpinBox" name="mail_total">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -443,7 +443,7 @@
      <string>mps</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="form_start">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -453,10 +453,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>confirm</string>
+     <string>start</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox_2">
+   <widget class="QSpinBox" name="mps">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -478,7 +478,7 @@
      <number>420000000</number>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="form_clear">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -504,7 +504,7 @@
      <string>Contents</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="form_stop">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -540,7 +540,7 @@
      <string>X-Header</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="form_data_2">
+   <widget class="QTextEdit" name="form_Xheader">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -563,7 +563,7 @@
      <string>Log</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit_2">
+   <widget class="QTextEdit" name="view_statistics">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -573,7 +573,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="view_log">
     <property name="geometry">
      <rect>
       <x>110</x>
