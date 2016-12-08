@@ -15,9 +15,13 @@ class form(QtGui.QMainWindow):
         self.ui = uic.loadUi('measure.ui', self)
         self.show()
 
-        self.connect(self.ui.pushButton, QtCore.SIGNAL("clicked()"), self.sendmail)
+        self.connect(self.ui.form_start, QtCore.SIGNAL("clicked()"), self.start_sendmail)
+        self.connect(self.ui.form_stop, QtCore.SIGNAL("clicked()"), self.stop_sendmail)
 
-    def sendmail(self):
+    def stop_sendmail(self):
+        print "debug"
+
+    def start_sendmail(self):
 
         """
         print self.ui.form_mailserver.text()
@@ -31,6 +35,8 @@ class form(QtGui.QMainWindow):
         msg['Subject'] = str(self.ui.form_subject.text())
         msg['From'] = str(self.ui.form_mailfrom.text())
         msg['To'] = str(self.ui.form_rcptto.text())
+        msg['Return-path'] = str(self.ui.form_returnpath.text())
+        msg['Reply-to'] = str(self.ui.form_replyto.text())
 
         s = smtplib.SMTP(str(self.ui.form_mailserver.text()))
         s.ehlo(str(self.ui.form_ehlo.text()))

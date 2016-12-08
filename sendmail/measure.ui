@@ -28,7 +28,7 @@
     <property name="geometry">
      <rect>
       <x>21</x>
-      <y>212</y>
+      <y>143</y>
       <width>60</width>
       <height>17</height>
      </rect>
@@ -63,7 +63,7 @@
      <string>inc</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="form_mailfrom_2">
+   <widget class="QLineEdit" name="form_mailfrom">
     <property name="geometry">
      <rect>
       <x>112</x>
@@ -173,7 +173,7 @@
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>212</y>
+      <y>143</y>
       <width>81</width>
       <height>22</height>
      </rect>
@@ -186,7 +186,7 @@
     <property name="geometry">
      <rect>
       <x>545</x>
-      <y>213</y>
+      <y>144</y>
       <width>31</width>
       <height>17</height>
      </rect>
@@ -199,7 +199,7 @@
     <property name="geometry">
      <rect>
       <x>112</x>
-      <y>208</y>
+      <y>139</y>
       <width>261</width>
       <height>27</height>
      </rect>
@@ -212,7 +212,7 @@
     <property name="geometry">
      <rect>
       <x>470</x>
-      <y>210</y>
+      <y>141</y>
       <width>71</width>
       <height>27</height>
      </rect>
@@ -234,7 +234,7 @@
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>210</y>
+      <y>141</y>
       <width>71</width>
       <height>27</height>
      </rect>
@@ -273,90 +273,6 @@
       <width>51</width>
       <height>27</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>147</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Reply-to</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="form_replyto">
-    <property name="geometry">
-     <rect>
-      <x>111</x>
-      <y>143</y>
-      <width>261</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="form_replyto_auto">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>146</y>
-      <width>81</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>auto</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="form_returnpath">
-    <property name="geometry">
-     <rect>
-      <x>111</x>
-      <y>175</y>
-      <width>261</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="form_returnpath_auto">
-    <property name="geometry">
-     <rect>
-      <x>392</x>
-      <y>178</y>
-      <width>81</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>auto</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_15">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>179</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Return-path</string>
     </property>
    </widget>
    <widget class="QSpinBox" name="mail_total">
@@ -596,6 +512,90 @@
      <string>statistics</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>172</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reply-to</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>204</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Return-path</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="form_replyto">
+    <property name="geometry">
+     <rect>
+      <x>113</x>
+      <y>168</y>
+      <width>261</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="form_replyto_auto">
+    <property name="geometry">
+     <rect>
+      <x>391</x>
+      <y>174</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>auto</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="form_returnpath_auto">
+    <property name="geometry">
+     <rect>
+      <x>392</x>
+      <y>202</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>auto</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="form_returnpath">
+    <property name="geometry">
+     <rect>
+      <x>113</x>
+      <y>200</y>
+      <width>261</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -629,7 +629,30 @@
  </widget>
  <tabstops>
   <tabstop>form_mailserver</tabstop>
+  <tabstop>form_mailserver_port</tabstop>
   <tabstop>form_ehlo</tabstop>
+  <tabstop>form_mailfrom</tabstop>
+  <tabstop>form_mailfrom_inc</tabstop>
+  <tabstop>form_mailfrom_start</tabstop>
+  <tabstop>form_mailfrom_end</tabstop>
+  <tabstop>form_rcptto</tabstop>
+  <tabstop>form_rcptto_inc</tabstop>
+  <tabstop>form_rcptto_start</tabstop>
+  <tabstop>form_rcptto_end</tabstop>
+  <tabstop>form_replyto</tabstop>
+  <tabstop>form_replyto_auto</tabstop>
+  <tabstop>form_returnpath</tabstop>
+  <tabstop>form_returnpath_auto</tabstop>
+  <tabstop>form_Xheader</tabstop>
+  <tabstop>form_subject</tabstop>
+  <tabstop>form_data</tabstop>
+  <tabstop>mail_total</tabstop>
+  <tabstop>mps</tabstop>
+  <tabstop>form_stop</tabstop>
+  <tabstop>form_start</tabstop>
+  <tabstop>view_log</tabstop>
+  <tabstop>view_statistics</tabstop>
+  <tabstop>form_clear</tabstop>
  </tabstops>
  <resources/>
  <connections/>
