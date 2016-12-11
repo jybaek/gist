@@ -2,6 +2,6 @@
 E-Mail measure
 
 ## usage
-ing...
+ing... tobe application  
 
     $ python mail-attack.py
