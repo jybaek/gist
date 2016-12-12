@@ -27,27 +27,27 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>21</x>
+      <x>10</x>
       <y>143</y>
-      <width>60</width>
-      <height>17</height>
+      <width>71</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>RCPT TO</string>
+     <string>* RCPT TO</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>11</x>
       <y>115</y>
-      <width>82</width>
-      <height>17</height>
+      <width>91</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>MAIL FROM</string>
+     <string>* MAIL FROM</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="form_mailfrom_inc">
@@ -79,14 +79,14 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>22</x>
+      <x>19</x>
       <y>53</y>
-      <width>78</width>
-      <height>17</height>
+      <width>81</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Mail Server</string>
+     <string>* Mail Server</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -302,12 +302,12 @@
      <rect>
       <x>22</x>
       <y>320</y>
-      <width>52</width>
+      <width>71</width>
       <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>Subject</string>
+     <string>* Subject</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -412,12 +412,12 @@
      <rect>
       <x>22</x>
       <y>353</y>
-      <width>64</width>
+      <width>71</width>
       <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>Contents</string>
+     <string>* Contents</string>
     </property>
    </widget>
    <widget class="QPushButton" name="form_stop">
@@ -456,7 +456,7 @@
      <string>X-Header</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="form_Xheader">
+   <widget class="QTextEdit" name="form_xheader">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -551,38 +551,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QCheckBox" name="form_replyto_auto">
-    <property name="geometry">
-     <rect>
-      <x>391</x>
-      <y>174</y>
-      <width>81</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>auto</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="form_returnpath_auto">
-    <property name="geometry">
-     <rect>
-      <x>392</x>
-      <y>202</y>
-      <width>81</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>auto</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="form_returnpath">
     <property name="geometry">
      <rect>
@@ -640,10 +608,8 @@
   <tabstop>form_rcptto_start</tabstop>
   <tabstop>form_rcptto_end</tabstop>
   <tabstop>form_replyto</tabstop>
-  <tabstop>form_replyto_auto</tabstop>
   <tabstop>form_returnpath</tabstop>
-  <tabstop>form_returnpath_auto</tabstop>
-  <tabstop>form_Xheader</tabstop>
+  <tabstop>form_xheader</tabstop>
   <tabstop>form_subject</tabstop>
   <tabstop>form_data</tabstop>
   <tabstop>mail_total</tabstop>

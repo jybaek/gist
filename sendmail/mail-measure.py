@@ -38,6 +38,10 @@ class form(QtGui.QMainWindow):
         msg['Return-path'] = str(self.ui.form_returnpath.text())
         msg['Reply-to'] = str(self.ui.form_replyto.text())
 
+        x_header_line = str(self.ui.form_xheader.toPlainText()).split('\n')
+        for x_header in x_header_line:
+            msg[x_header.split(':')[0]] = x_header.split(':')[1]
+
         s = smtplib.SMTP(str(self.ui.form_mailserver.text()))
         s.ehlo(str(self.ui.form_ehlo.text()))
         #s.starttls()
