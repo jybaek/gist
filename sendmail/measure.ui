@@ -79,9 +79,9 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>19</x>
+      <x>9</x>
       <y>53</y>
-      <width>81</width>
+      <width>91</width>
       <height>20</height>
      </rect>
     </property>
@@ -410,10 +410,10 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>22</x>
+      <x>12</x>
       <y>353</y>
-      <width>71</width>
-      <height>17</height>
+      <width>81</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -456,7 +456,7 @@
      <string>X-Header</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="form_xheader">
+   <widget class="QTextEdit" name="form_Xheader">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -609,7 +609,7 @@
   <tabstop>form_rcptto_end</tabstop>
   <tabstop>form_replyto</tabstop>
   <tabstop>form_returnpath</tabstop>
-  <tabstop>form_xheader</tabstop>
+  <tabstop>form_Xheader</tabstop>
   <tabstop>form_subject</tabstop>
   <tabstop>form_data</tabstop>
   <tabstop>mail_total</tabstop>
