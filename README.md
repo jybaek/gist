@@ -11,4 +11,4 @@ Make the pieces together to develop useful.
     * [sendmail](sendmail/)
  
 ## License
-There are no constraint on license.
+[MIT](LICENSE)
