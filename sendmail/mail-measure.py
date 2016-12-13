@@ -32,23 +32,37 @@ class form(QtGui.QMainWindow):
         print self.ui.form_data.toPlainText()
         """
         msg = MIMEText(str(self.ui.form_data.toPlainText()), _charset='euc-kr')
+        """ subject """
         msg['Subject'] = str(self.ui.form_subject.text())
+
+        """ mail from """
         msg['From'] = str(self.ui.form_mailfrom.text())
+
+        """ rcpt to """
         msg['To'] = str(self.ui.form_rcptto.text())
 
+        """ return-path """
         if len(str(self.ui.form_returnpath.text()).strip()) != 0:
             msg['Return-path'] = str(self.ui.form_returnpath.text())
+
+        """ reply-to """
         if len(str(self.ui.form_replyto.text()).strip()) != 0:
             msg['Reply-to'] = str(self.ui.form_replyto.text())
 
+        """ x-header """
         if len(str(self.ui.form_xheader.toPlainText()).strip()) != 0:
             x_header_line = str(self.ui.form_xheader.toPlainText()).split('\n')
             for x_header in x_header_line:
                 msg[x_header.split(':')[0]] = x_header.split(':')[1]
 
+        """ smtp server """
         s = smtplib.SMTP(str(self.ui.form_mailserver.text()))
+
+        """ ehlo """
         s.ehlo(str(self.ui.form_ehlo.text()))
         #s.starttls()
+
+        """ sendmail """
         ret = s.sendmail(msg['From'], msg['To'], msg.as_string())
         s.quit()
 
