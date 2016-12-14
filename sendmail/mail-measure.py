@@ -5,6 +5,7 @@ import smtplib
 import socket
 from email.MIMEText import MIMEText
 from PyQt4 import QtGui, uic, QtCore
+from multiprocessing import Process
 
 """
 sendmail examples: https://docs.python.org/2/library/email-examples.html
@@ -16,11 +17,23 @@ class form(QtGui.QMainWindow):
         self.ui = uic.loadUi('measure.ui', self)
         self.show()
 
-        self.connect(self.ui.form_start, QtCore.SIGNAL("clicked()"), self.start_sendmail)
+        self.connect(self.ui.form_start, QtCore.SIGNAL("clicked()"), self.create_jobs)
         self.connect(self.ui.form_stop, QtCore.SIGNAL("clicked()"), self.stop_sendmail)
 
     def stop_sendmail(self):
         print "debug"
+
+    def create_jobs(self):
+        print "create_jobs"
+        p1 = Process(target = self.start_sendmail)
+        p2 = Process(target=self.start_sendmail)
+        p3 = Process(target=self.start_sendmail)
+        p1.start()
+        p2.start()
+        p3.start()
+        p1.join()
+        p2.join()
+        p3.join()
 
     def start_sendmail(self):
 
