@@ -2,6 +2,7 @@
 
 import sys
 import smtplib
+import socket
 from email.MIMEText import MIMEText
 from PyQt4 import QtGui, uic, QtCore
 
@@ -35,11 +36,15 @@ class form(QtGui.QMainWindow):
         """ subject """
         msg['Subject'] = str(self.ui.form_subject.text())
 
-        """ mail from """
+        """ from """
         msg['From'] = str(self.ui.form_mailfrom.text())
 
         """ rcpt to """
-        msg['To'] = str(self.ui.form_rcptto.text())
+        recipients = ["oops@jiran1.com", "test@jiran1.com"]
+
+        """ to """
+        msg['To'] = ", ".join(recipients)
+
 
         """ return-path """
         if len(str(self.ui.form_returnpath.text()).strip()) != 0:
@@ -56,14 +61,17 @@ class form(QtGui.QMainWindow):
                 msg[x_header.split(':')[0]] = x_header.split(':')[1]
 
         """ smtp server """
-        s = smtplib.SMTP(str(self.ui.form_mailserver.text()))
-
+        try:
+            s = smtplib.SMTP(str(self.ui.form_mailserver.text()))
+        except socket.error as e:
+            print "could not connect"
+            return 0
         """ ehlo """
         s.ehlo(str(self.ui.form_ehlo.text()))
         #s.starttls()
 
         """ sendmail """
-        ret = s.sendmail(msg['From'], msg['To'], msg.as_string())
+        ret = s.sendmail(msg['From'], recipients, msg.as_string())
         s.quit()
 
         print ret
