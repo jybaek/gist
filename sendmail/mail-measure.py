@@ -30,11 +30,11 @@ class form(QtGui.QMainWindow):
         for i in range(int(self.ui.mail_total.text())):
             jobs.append(Process(target = self.start_sendmail))
 
-        for i in range(len(jobs)):
-            jobs[i].start()
+        for job in jobs:
+            job.start()
 
-        for i in range(len(jobs)):
-            jobs[i].join()
+        for job in jobs:
+            job.join()
 
     def start_sendmail(self):
 
