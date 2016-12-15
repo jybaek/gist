@@ -24,16 +24,17 @@ class form(QtGui.QMainWindow):
         print "debug"
 
     def create_jobs(self):
-        print "create_jobs"
-        p1 = Process(target = self.start_sendmail)
-        p2 = Process(target=self.start_sendmail)
-        p3 = Process(target=self.start_sendmail)
-        p1.start()
-        p2.start()
-        p3.start()
-        p1.join()
-        p2.join()
-        p3.join()
+        print "create_jobs (%s) " % self.ui.mail_total.text()
+        jobs = list()
+
+        for i in range(int(self.ui.mail_total.text())):
+            jobs.append(Process(target = self.start_sendmail))
+
+        for i in range(len(jobs)):
+            jobs[i].start()
+
+        for i in range(len(jobs)):
+            jobs[i].join()
 
     def start_sendmail(self):
 
