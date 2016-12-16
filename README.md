@@ -9,6 +9,7 @@ Make the pieces together to develop useful.
     * [get_github_issue](get_github_issue/)
 * python
     * [sendmail](sendmail/)
+    * [finance](finance/)
  
 ## License
 [MIT](LICENSE)
