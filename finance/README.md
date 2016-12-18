@@ -1,23 +1,24 @@
 ## summary
-Æ¯Á¤ code(Á¾¸ñ)ÀÇ ÁÖ½Ä Á¤º¸¸¦ [³×ÀÌ¹ö](http://www.naver.com) ÁÖ½ÄÆäÀÌÁö¸¦ ÅëÇØ Å©·Ñ¸µ ÇÕ´Ï´Ù. ³×ÀÌ¹ö·Î °úµµÇÑ Æ®·¡ÇÈÀ» ¹ß»ý½ÃÅ°°Å³ª ±âÅ¸ ¹®Á¦¸¦ ¹ß»ý½ÃÅ°´Â ÇàÀ§´Â ÇÁ·Î±×·¥À» »ç¿ëÇÏ´Â º»ÀÎ¿¡°Ô ÀÖÀ½À» ÀØÁö ¸¶½Ê½Ã¿À.
+íŠ¹ì • ì¢…ëª©(code)ì˜ ì£¼ì‹ ì •ë³´ë¥¼ [ë„¤ì´ë²„](http://www.naver.com) ì£¼ì‹íŽ˜ì´ì§€ë¥¼ í†µí•´ í¬ë¡¤ë§ í•©ë‹ˆë‹¤. ë„¤ì´ë²„ë¡œ ê³¼ë„í•œ íŠ¸ëž˜í”½ì„ ë°œìƒì‹œí‚¤ê±°ë‚˜ ê¸°íƒ€ ë¬¸ì œë¥¼ ë°œìƒì‹œí‚¤ëŠ” í–‰ìœ„ëŠ” í”„ë¡œê·¸ëž¨ì„ ì‚¬ìš©í•˜ëŠ” ë³¸ì¸ì—ê²Œ ìžˆìŒì„ ìžŠì§€ ë§ˆì‹­ì‹œì˜¤.
+
 
 ## usage
 ```bash
     $ python finance.py 123456789
 
-	Á¾¸ñ ½Ã¼¼ Á¤º¸
-	2016³â 12¿ù 16ÀÏ 16½Ã 10ºÐ ±âÁØ Àå¸¶°¨
-	Á¾¸ñ¸í xxxxxxxx
-	Á¾¸ñÄÚµå 123456789 ÄÚ½º´Ú
-	ÇöÀç°¡ xxxxxx ÀüÀÏ´ëºñ ÇÏ¶ô 80 ¸¶ÀÌ³Ê½º 4.28 ÆÛ¼¾Æ®
-	ÀüÀÏ°¡ xxxxxxx
-	½Ã°¡ xxxxxx
-	°í°¡ xxxxxx
-	»óÇÑ°¡ xxxxxxx
-	Àú°¡ xxxxxxx
-	ÇÏÇÑ°¡ xxxxxxx
-	°Å·¡·® xxxxxxxxxxx
-	°Å·¡´ë±Ý xxxxxxxxx¹é¸¸
+	ì¢…ëª© ì‹œì„¸ ì •ë³´
+	2016ë…„ 12ì›” 16ì¼ 16ì‹œ 10ë¶„ ê¸°ì¤€ ìž¥ë§ˆê°
+	ì¢…ëª©ëª… xxxxxxxx
+	ì¢…ëª©ì½”ë“œ 123456789 ì½”ìŠ¤ë‹¥
+	í˜„ìž¬ê°€ xxxxxx ì „ì¼ëŒ€ë¹„ í•˜ë½ 80 ë§ˆì´ë„ˆìŠ¤ 4.28 í¼ì„¼íŠ¸
+	ì „ì¼ê°€ xxxxxxx
+	ì‹œê°€ xxxxxx
+	ê³ ê°€ xxxxxx
+	ìƒí•œê°€ xxxxxxx
+	ì €ê°€ xxxxxxx
+	í•˜í•œê°€ xxxxxxx
+	ê±°ëž˜ëŸ‰ xxxxxxxxxxx
+	ê±°ëž˜ëŒ€ê¸ˆ xxxxxxxxxë°±ë§Œ
 
 	$
 ```
