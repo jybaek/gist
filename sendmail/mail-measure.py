@@ -45,6 +45,7 @@ class form(QtGui.QMainWindow):
         print self.ui.form_rcptto.text()
         print self.ui.form_subject.text()
         print self.ui.form_data.toPlainText()
+        print self.ui.form_mailfrom_inc.isChecked()
         """
         msg = MIMEText(str(self.ui.form_data.toPlainText()), _charset='euc-kr')
         """ subject """
@@ -52,9 +53,21 @@ class form(QtGui.QMainWindow):
 
         """ from """
         msg['From'] = str(self.ui.form_mailfrom.text())
+        if self.ui.form_mailfrom_inc.isChecked():
+            print self.ui.form_mailfrom_start.text() + " " + self.ui.form_mailfrom_end.text()
 
         """ rcpt to """
-        recipients = ["oops@jiran1.com", "test@jiran1.com"]
+        recipients = list()
+        if self.ui.form_rcptto_inc.isChecked():
+            #print self.ui.form_rcptto_start.text() + " " + self.ui.form_rcptto_end.text()
+            """ 콤마(,)로 구분해서 auto increment 수행 """
+            for recipient in str(self.ui.form_rcptto.text()).split(","):
+                for index in range(int(self.ui.form_rcptto_start.text()), int(self.ui.form_rcptto_end.text())):
+                    recipients.append(recipient.split("@")[0] + "-" + str(index) + "@" + recipient.split("@")[1])
+        else:
+            recipients = str(self.ui.form_rcptto.text())
+
+        print recipients
 
         """ to """
         msg['To'] = ", ".join(recipients)
