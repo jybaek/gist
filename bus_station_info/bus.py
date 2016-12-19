@@ -2,6 +2,7 @@
 #-*- coding: utf-8 -*-
 
 import sys
+import os
 import requests
 from bs4 import BeautifulSoup
 
@@ -14,15 +15,17 @@ if len(sys.argv) == 1:
 
 code = sys.argv[1]
 
+os.system('clear')
 url = "http://bus.go.kr/xmlRequest/getStationByUid.jsp?strBusNumber=" + code
 s = requests.get(url)
 plain_text = s.text
 
 soup = BeautifulSoup(plain_text, "lxml")
 #print soup
+print "Bus station : " + soup.find('stnm').string
 print '---------------------------'
 for link in soup.find_all('stationlist'):
-	print "|   Bus :" + link.rtnm.string
+	print "|   Bus : " + link.rtnm.string
 	print "|   1) " + link.arrmsg1.string
 	print "|   2) " + link.arrmsg2.string
 	print '---------------------------'
