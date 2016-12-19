@@ -31,6 +31,7 @@ conn_root_ssh()
 	ssh-keygen -R ${SERVER}
 
 	expect -c "spawn ssh ${ID}@${SERVER}"\
+	-c "trap {	 set rows [stty rows];  set cols [stty columns]; stty rows \$rows columns \$cols < \$spawn_out(slave,name);} WINCH" \
 	-c "expect -re \"\(yes/no\)? \"" \
 	-c "send \"yes\r\"" \
 	-c "expect -re \"password\"" \
@@ -48,6 +49,7 @@ conn_admin_ssh()
 	ssh-keygen -R ${SERVER}
 
 	expect -c "spawn ssh ${ID}@${SERVER}"\
+	-c "trap {	 set rows [stty rows];  set cols [stty columns]; stty rows \$rows columns \$cols < \$spawn_out(slave,name);} WINCH" \
 	-c "expect -re \"\(yes/no\)? \"" \
 	-c "send \"yes\r\"" \
 	-c "expect -re \"password\"" \
