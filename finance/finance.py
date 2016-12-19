@@ -2,8 +2,11 @@
 #-*- coding: utf-8 -*-
 
 import sys
-import requests
-from bs4 import BeautifulSoup
+try:
+  import requests
+  from bs4 import BeautifulSoup
+except ImportError:
+  print("Please install requests, BeautifulSoup.")
 
 def usage():
 	print "Usage: %s code" % sys.argv[0] 
