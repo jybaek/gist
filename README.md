@@ -1,5 +1,5 @@
 # Gistbox
-Make the pieces together to develop useful.
+Program pieces.
  
 ## Summary 
 * shell script
