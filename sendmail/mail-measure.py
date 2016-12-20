@@ -67,8 +67,6 @@ class form(QtGui.QMainWindow):
         else:
             recipients = str(self.ui.form_rcptto.text())
 
-        print recipients
-
         """ to """
         msg['To'] = ", ".join(recipients)
 
@@ -100,8 +98,6 @@ class form(QtGui.QMainWindow):
         """ sendmail """
         ret = s.sendmail(msg['From'], recipients, msg.as_string())
         s.quit()
-
-        print ret
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
