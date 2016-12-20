@@ -3,8 +3,11 @@
 
 import sys
 import os
-import requests
-from bs4 import BeautifulSoup
+try:
+	import requests
+	from bs4 import BeautifulSoup
+except ImportError:
+	print("Please install requests, BeautifulSoup.")
 
 def usage():
 	print "Usage: %s code" % sys.argv[0] 
@@ -21,7 +24,7 @@ s = requests.get(url)
 plain_text = s.text
 
 soup = BeautifulSoup(plain_text, "lxml")
-#print soup
+
 print "Bus station : " + soup.find('stnm').string
 print '---------------------------'
 for link in soup.find_all('stationlist'):
