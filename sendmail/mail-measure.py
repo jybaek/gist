@@ -27,18 +27,21 @@ class form(QtGui.QMainWindow):
     def create_jobs(self):
         print "create_jobs (%s) " % self.ui.mail_total.text()
         jobs = list()
+        mps = int(self.ui.mps.text())
 
         for i in range(int(self.ui.mail_total.text())):
             jobs.append(Process(target = self.start_sendmail),)
 
         for job in jobs:
+
             job.start()
 
-            mps = int(self.ui.mps.text())
             if mps == 0:
                 mps = 1
+            print 1.0/mps
 
-            time.sleep(1.0/mps)
+            time.sleep(1.0 / mps)
+            time.sleep(1.0 / mps)
 
         for job in jobs:
             job.join()
