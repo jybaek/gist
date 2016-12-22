@@ -32,7 +32,6 @@ class form(QtGui.QMainWindow):
         for i in range(int(self.ui.mail_total.text())):
             jobs.append(Process(target = self.start_sendmail),)
 
-        start = time.time()
         for job in jobs:
 
             job.start()
@@ -47,8 +46,6 @@ class form(QtGui.QMainWindow):
         for job in jobs:
             job.join()
 
-        end = time.time()
-        print end-start
 
     def start_sendmail(self):
 
@@ -61,6 +58,8 @@ class form(QtGui.QMainWindow):
         print self.ui.form_data.toPlainText()
         print self.ui.form_mailfrom_inc.isChecked()
         """
+        start = time.time()
+
         msg = MIMEText(str(self.ui.form_data.toPlainText()), _charset='euc-kr')
         """ subject """
         msg['Subject'] = str(self.ui.form_subject.text())
@@ -110,10 +109,16 @@ class form(QtGui.QMainWindow):
         #s.starttls()
 
         """ sendmail """
-        ret = s.sendmail(msg['From'], recipients, msg.as_string())
-        s.quit()
+        try:
+            ret = s.sendmail(msg['From'], recipients, msg.as_string())
+            s.quit()
+        # Catch all for SMTP exceptions
+        except smtplib.SMTPException, e:
+            print "Failure to send email: %s" % str(e)
 
-        print "successed"
+        end = time.time()
+
+        print "successed (%d) " % (end-start)
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
