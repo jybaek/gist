@@ -20,7 +20,7 @@
 	상한가 xxxxxxx
 	저가 xxxxxxx
 	하한가 xxxxxxx
-	거래량 xxxxxxxxxxx
+	거래량 xxxxxxxxxx
 	거래대금 xxxxxxxxx백만
 
 	$
