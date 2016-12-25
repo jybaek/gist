@@ -1,5 +1,5 @@
 ## summary
-E-Mail measure
+E-Mail measure..
 
 ## usage
 ing... tobe application  
