@@ -38,7 +38,6 @@ class form(QtGui.QMainWindow):
 
             if mps == 0:
                 mps = 1
-            print 1.0/mps
 
             time.sleep(1.0 / mps)
             time.sleep(1.0 / mps)
@@ -102,7 +101,10 @@ class form(QtGui.QMainWindow):
         try:
             s = smtplib.SMTP(str(self.ui.form_mailserver.text()))
         except socket.error as e:
-            print "could not connect"
+            print "could not connect: %s" % str(e)
+            return 0
+        except smtplib.SMTPConnectError, e:
+            print "Failure to send email: %s" % str(e)
             return 0
         """ ehlo """
         s.ehlo(str(self.ui.form_ehlo.text()))
