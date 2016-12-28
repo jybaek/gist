@@ -19,10 +19,14 @@ class form(QtGui.QMainWindow):
         self.show()
 
         self.connect(self.ui.form_start, QtCore.SIGNAL("clicked()"), self.create_jobs)
+        self.connect(self.ui.form_start, QtCore.SIGNAL("clicked()"), self.get_log)
         self.connect(self.ui.form_stop, QtCore.SIGNAL("clicked()"), self.stop_sendmail)
 
     def stop_sendmail(self):
         print "debug"
+
+    def get_log(self):
+        self.ui.view_log.append("ooooooooooooooooops")
 
     def create_jobs(self):
         print "create_jobs (%s) " % self.ui.mail_total.text()
