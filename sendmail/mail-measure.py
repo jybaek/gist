@@ -23,7 +23,8 @@ class form(QtGui.QMainWindow):
         self.connect(self.ui.form_stop, QtCore.SIGNAL("clicked()"), self.stop_sendmail)
 
     def stop_sendmail(self):
-        print "debug"
+        print "terminate"
+        exit(0)
 
     def get_log(self):
         self.ui.view_log.append("ooooooooooooooooops")
