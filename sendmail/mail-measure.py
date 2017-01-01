@@ -19,7 +19,6 @@ class form(QtGui.QMainWindow):
         self.show()
 
         self.connect(self.ui.form_start, QtCore.SIGNAL("clicked()"), self.create_jobs)
-        self.connect(self.ui.form_start, QtCore.SIGNAL("clicked()"), self.get_log)
         self.connect(self.ui.form_stop, QtCore.SIGNAL("clicked()"), self.stop_sendmail)
 
     def stop_sendmail(self):
@@ -40,6 +39,8 @@ class form(QtGui.QMainWindow):
         for job in jobs:
 
             job.start()
+
+            self.get_log()
 
             if mps == 0:
                 mps = 1
