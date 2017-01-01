@@ -26,7 +26,7 @@ conn_root_ssh()
 {
 	SERVER=$1
 	ID=$2
-	PWD=$3
+	PASSWD=$3
 
 	ssh-keygen -R ${SERVER}
 
@@ -35,7 +35,7 @@ conn_root_ssh()
 	-c "expect -re \"\(yes/no\)? \"" \
 	-c "send \"yes\r\"" \
 	-c "expect -nocase -re \"암호|password\"" \
-	-c "send \"${PWD}\r\"" \
+	-c "send \"${PASSWD}\r\"" \
 	-c "interact"
 }
 
@@ -43,8 +43,8 @@ conn_admin_ssh()
 {
 	SERVER=$1
 	ID=$2
-	PWD1=$3
-	PWD2=$4
+	PASSWD1=$3
+	PASSWD2=$4
 
 	ssh-keygen -R ${SERVER}
 
@@ -53,11 +53,11 @@ conn_admin_ssh()
 	-c "expect -re \"\(yes/no\)? \"" \
 	-c "send \"yes\r\"" \
 	-c "expect -nocase -re \"암호|password\"" \
-	-c "send \"${PWD1}\r\"" \
+	-c "send \"${PASSWD1}\r\"" \
 	-c "expect -re \"~]\"" \
 	-c "send \"su -\r\"" \
 	-c "expect -nocase -re \"암호|password\"" \
-	-c "send \"${PWD2}\r\"" \
+	-c "send \"${PASSWD2}\r\"" \
 	-c "interact"
 }
 
