@@ -34,7 +34,7 @@ conn_root_ssh()
 	-c "trap {	 set rows [stty rows];  set cols [stty columns]; stty rows \$rows columns \$cols < \$spawn_out(slave,name);} WINCH" \
 	-c "expect -re \"\(yes/no\)? \"" \
 	-c "send \"yes\r\"" \
-	-c "expect -nocase -re \"password\"" \
+	-c "expect -nocase -re \"암호|password\"" \
 	-c "send \"${PWD}\r\"" \
 	-c "interact"
 }
@@ -52,11 +52,11 @@ conn_admin_ssh()
 	-c "trap {	 set rows [stty rows];  set cols [stty columns]; stty rows \$rows columns \$cols < \$spawn_out(slave,name);} WINCH" \
 	-c "expect -re \"\(yes/no\)? \"" \
 	-c "send \"yes\r\"" \
-	-c "expect -nocase -re \"password\"" \
+	-c "expect -nocase -re \"암호|password\"" \
 	-c "send \"${PWD1}\r\"" \
 	-c "expect -re \"~]\"" \
 	-c "send \"su -\r\"" \
-	-c "expect -re \"암호:\"" \
+	-c "expect -nocase -re \"암호|password\"" \
 	-c "send \"${PWD2}\r\"" \
 	-c "interact"
 }
