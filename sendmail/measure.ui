@@ -6,608 +6,257 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>649</width>
-    <height>804</height>
+    <width>479</width>
+    <height>827</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="form_ehlo">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>49</y>
-      <width>161</width>
-      <height>27</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>143</y>
-      <width>71</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>* RCPT TO</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>11</x>
-      <y>115</y>
-      <width>91</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>* MAIL FROM</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="form_mailfrom_inc">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>115</y>
-      <width>81</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>inc</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="form_mailfrom">
-    <property name="geometry">
-     <rect>
-      <x>112</x>
-      <y>111</y>
-      <width>261</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>9</x>
-      <y>53</y>
-      <width>91</width>
-      <height>20</height>
+      <y>7</y>
+      <width>455</width>
+      <height>764</height>
      </rect>
     </property>
-    <property name="text">
-     <string>* Mail Server</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>51</y>
-      <width>38</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>EHLO</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="form_mailserver">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>50</y>
-      <width>191</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="form_mailfrom_start">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>113</y>
-      <width>71</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="wrapping">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="accelerated">
-     <bool>false</bool>
-    </property>
-    <property name="maximum">
-     <number>420000000</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>545</x>
-      <y>116</y>
-      <width>31</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>~</string>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="form_mailfrom_end">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>113</y>
-      <width>71</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="wrapping">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="accelerated">
-     <bool>false</bool>
-    </property>
-    <property name="maximum">
-     <number>420000000</number>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="form_rcptto_inc">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>143</y>
-      <width>81</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>inc</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_12">
-    <property name="geometry">
-     <rect>
-      <x>545</x>
-      <y>144</y>
-      <width>31</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>~</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="form_rcptto">
-    <property name="geometry">
-     <rect>
-      <x>112</x>
-      <y>139</y>
-      <width>261</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="form_rcptto_start">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>141</y>
-      <width>71</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="wrapping">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="accelerated">
-     <bool>false</bool>
-    </property>
-    <property name="maximum">
-     <number>420000000</number>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="form_rcptto_end">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>141</y>
-      <width>71</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="wrapping">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="accelerated">
-     <bool>false</bool>
-    </property>
-    <property name="maximum">
-     <number>420000000</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_13">
-    <property name="geometry">
-     <rect>
-      <x>308</x>
-      <y>53</y>
-      <width>38</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="form_mailserver_port">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>50</y>
-      <width>51</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="mail_total">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>473</y>
-      <width>111</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="wrapping">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="accelerated">
-     <bool>false</bool>
-    </property>
-    <property name="maximum">
-     <number>420000000</number>
-    </property>
-    <property name="value">
-     <number>1</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>22</x>
-      <y>320</y>
-      <width>71</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>* Subject</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>477</y>
-      <width>68</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Total</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="form_data">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>353</y>
-      <width>521</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="html">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>* Mail Server</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" colspan="4">
+      <widget class="QLineEdit" name="form_mailserver">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QLineEdit" name="form_mailserver_port">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>EHLO</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" colspan="6">
+      <widget class="QLineEdit" name="form_ehlo"/>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>* MAIL FROM</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2" colspan="6">
+      <widget class="QLineEdit" name="form_mailfrom">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>* RCPT TO</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2" colspan="6">
+      <widget class="QLineEdit" name="form_rcptto">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>Reply-to</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2" colspan="6">
+      <widget class="QLineEdit" name="form_replyto">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string>Return-path</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2" colspan="6">
+      <widget class="QLineEdit" name="form_returnpath">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_16">
+       <property name="text">
+        <string>X-Header</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2" colspan="6">
+      <widget class="QTextEdit" name="form_xheader"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>* Subject</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2" colspan="6">
+      <widget class="QLineEdit" name="form_subject">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>* Contents</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2" colspan="6">
+      <widget class="QTextEdit" name="form_data">
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="Line" name="line">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>543</y>
-      <width>631</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>476</y>
-      <width>68</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>mps</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="form_start">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>513</y>
-      <width>99</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>start</string>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="mps">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>472</y>
-      <width>111</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="wrapping">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="accelerated">
-     <bool>false</bool>
-    </property>
-    <property name="maximum">
-     <number>420000000</number>
-    </property>
-    <property name="value">
-     <number>1</number>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="form_clear">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>710</y>
-      <width>99</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>clear</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>12</x>
-      <y>353</y>
-      <width>81</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>* Contents</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="form_stop">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>513</y>
-      <width>99</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>stop</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="form_subject">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>320</y>
-      <width>521</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_16">
-    <property name="geometry">
-     <rect>
-      <x>19</x>
-      <y>244</y>
-      <width>71</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>X-Header</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="form_xheader">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>250</y>
-      <width>521</width>
-      <height>61</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>574</y>
-      <width>68</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Log</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="view_statistics">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>656</y>
-      <width>521</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-    <property name="html">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="view_log">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>570</y>
-      <width>521</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-    <property name="html">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>660</y>
-      <width>68</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>statistics</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>22</x>
-      <y>172</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Reply-to</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_15">
-    <property name="geometry">
-     <rect>
-      <x>22</x>
-      <y>204</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Return-path</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="form_replyto">
-    <property name="geometry">
-     <rect>
-      <x>113</x>
-      <y>168</y>
-      <width>261</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="form_returnpath">
-    <property name="geometry">
-     <rect>
-      <x>113</x>
-      <y>200</y>
-      <width>261</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="2">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Total</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="3">
+      <widget class="QSpinBox" name="mail_total">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="wrapping">
+        <bool>false</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="accelerated">
+        <bool>false</bool>
+       </property>
+       <property name="maximum">
+        <number>420000000</number>
+       </property>
+       <property name="value">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="4">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>mps</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="5" colspan="3">
+      <widget class="QSpinBox" name="mps">
+       <property name="wrapping">
+        <bool>false</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="accelerated">
+        <bool>false</bool>
+       </property>
+       <property name="maximum">
+        <number>420000000</number>
+       </property>
+       <property name="value">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="3" colspan="2">
+      <widget class="QPushButton" name="form_stop">
+       <property name="text">
+        <string>stop</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="5" colspan="3">
+      <widget class="QPushButton" name="form_start">
+       <property name="text">
+        <string>start</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0" colspan="8">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Count</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="1" colspan="7">
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+     <item row="13" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>status</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="1" colspan="7">
+      <widget class="QLineEdit" name="lineEdit_2"/>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -615,7 +264,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>649</width>
+     <width>479</width>
      <height>31</height>
     </rect>
    </property>
@@ -645,13 +294,7 @@ p, li { white-space: pre-wrap; }
   <tabstop>form_mailserver_port</tabstop>
   <tabstop>form_ehlo</tabstop>
   <tabstop>form_mailfrom</tabstop>
-  <tabstop>form_mailfrom_inc</tabstop>
-  <tabstop>form_mailfrom_start</tabstop>
-  <tabstop>form_mailfrom_end</tabstop>
   <tabstop>form_rcptto</tabstop>
-  <tabstop>form_rcptto_inc</tabstop>
-  <tabstop>form_rcptto_start</tabstop>
-  <tabstop>form_rcptto_end</tabstop>
   <tabstop>form_replyto</tabstop>
   <tabstop>form_returnpath</tabstop>
   <tabstop>form_xheader</tabstop>
@@ -661,9 +304,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>mps</tabstop>
   <tabstop>form_stop</tabstop>
   <tabstop>form_start</tabstop>
-  <tabstop>view_log</tabstop>
-  <tabstop>view_statistics</tabstop>
-  <tabstop>form_clear</tabstop>
  </tabstops>
  <resources/>
  <connections/>
