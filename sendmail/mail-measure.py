@@ -25,9 +25,6 @@ class form(QtGui.QMainWindow):
         print "terminate"
         exit(0)
 
-    def get_log(self):
-        self.ui.view_log.append("ooooooooooooooooops")
-
     def create_jobs(self):
         print "create_jobs (%s) " % self.ui.mail_total.text()
         jobs = list()
@@ -39,8 +36,6 @@ class form(QtGui.QMainWindow):
         for job in jobs:
 
             job.start()
-
-            self.get_log()
 
             if mps == 0:
                 mps = 1
@@ -71,20 +66,11 @@ class form(QtGui.QMainWindow):
 
         """ from """
         msg['From'] = str(self.ui.form_mailfrom.text())
-        if self.ui.form_mailfrom_inc.isChecked():
-            print self.ui.form_mailfrom_start.text() + " " + self.ui.form_mailfrom_end.text()
 
         """ rcpt to """
         recipients = []
-        if self.ui.form_rcptto_inc.isChecked():
-            #print self.ui.form_rcptto_start.text() + " " + self.ui.form_rcptto_end.text()
-            """ 콤마(,)로 구분해서 auto increment 수행 """
-            for recipient in str(self.ui.form_rcptto.text()).split(","):
-                for index in range(int(self.ui.form_rcptto_start.text()), int(self.ui.form_rcptto_end.text())+1):
-                    recipients.append(recipient.split("@")[0] + "-" + str(index) + "@" + recipient.split("@")[1])
-        else:
-            for recipient in str(self.ui.form_rcptto.text()).split(","):
-                recipients.append(recipient)
+        for recipient in str(self.ui.form_rcptto.text()).split(","):
+            recipients.append(recipient)
 
         """ to """
         msg['To'] = ", ".join(recipients)
