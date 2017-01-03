@@ -10,17 +10,18 @@
 ## usage
     $ connect_ssh
   
+명령어 실행시에 간단한 소개글을 확인할 수 있습니다. 사용경고 문구등을 삽입하면 알맞을 것 같군요.
+
 <div style="width:50%; margin:auto; margin-bottom:10px; margin-top:20px;">
 <img style="width:100%" src="image1.png">
 </div>
 
-간단한 소개글을 작성할 수 있습니다.
+OK를 누르면 접속 가능한 서버 목록을 보여줍니다. 선택하면 자동으로 해당 서버에 접속됩니다.
 
 <div style="width:50%; margin:auto; margin-bottom:10px; margin-top:20px;">
 <img style="width:100%" src="image2.png">
 </div>
 
-선택하면 자동으로 해당 서버에 접속됩니다.
 
 Shell script안에 비밀번호를 기록할 수 없는 서버의 경우를 위해 패스워드를 입력 받는 함수를 추가했습니다. 
 `test.example.com`이 그 예제가 될 것입니다.
