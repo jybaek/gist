@@ -8,7 +8,7 @@ If you have a username and password, you can query up to 5,000 times per hour.
 document: https://developer.github.com/v3/#rate-limiting
 
 ## usage
-modify `user`, `password`, `github_target`, `github_repo` in get_github_issue.php
+Code modify `user`, `password`, `github_target`, `github_repo` in get_github_issue.php
 
     $ php get_github_issue.php
     # [number] title
