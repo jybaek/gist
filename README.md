@@ -3,7 +3,7 @@ Program pieces.
  
 ## Summary 
 
-* shell script
+* Shell script
     * [diff](diff/)
     * [connect_ssh](connect_ssh/)
 
