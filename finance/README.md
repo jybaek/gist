@@ -22,6 +22,5 @@
 	하한가 xxxxxxx
 	거래량 xxxxxxxxx
 	거래대금 xxxxxxxx백만
-
 	$
 ```
