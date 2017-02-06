@@ -1,0 +1,70 @@
+#!/bin/sh
+
+chk_env()
+{
+	which dialog > /dev/null 2>&1
+	if [ "$?" != "0" ];then
+		echo "Please install dialog"
+		exit 255
+	fi
+
+	which sshpass > /dev/null 2>&1
+	if [ "$?" != "0" ];then
+		echo "Please install sshpass"
+		exit 255
+	fi
+}
+
+dialog --title 'Welcome' --msgbox 'Password bulk change system.\n
+\n\nbug: oops.jybaek@gmail.com' 10 40
+
+conn_ssh() 
+{
+    SERVER=$1
+    ID=$2
+	sshpass -p "$current_passwd" ssh $ID@$SERVER "echo -e '$current_passwd\n$next_passwd\n$next_passwd' | passwd"
+}
+
+input_current_passwd_ssh()
+{
+    current_passwd=$(dialog --title "Password" \
+        --clear \
+        --insecure \
+        --passwordbox "Enter ${ID} currnet password" 10 40 3>&2 2>&1 1>&3)
+
+    if [ "$?" = 1 ];then
+        echo "Cancel .."
+        exit 255
+    fi
+}
+
+input_next_passwd_ssh()
+{
+    next_passwd=$(dialog --title "Password" \
+        --clear \
+        --insecure \
+        --passwordbox "Enter ${ID} next password" 10 40 3>&2 2>&1 1>&3)
+
+    if [ "$?" = 1 ];then
+        echo "Cancel .."
+        exit 255
+    fi
+}
+
+chk_env
+ID="vfilter" # XXX. input your target ID
+LIST=$(whiptail --title "Checklist" --separate-output --checklist \
+"Choose server" 20 60 3 \
+"192.168.0.10" "test server#1" ON \
+"192.168.0.11" "test server#2" ON \
+"172.17.0.30" "db server" ON  3>&1 1>&2 2>&3)
+
+input_current_passwd_ssh
+input_next_passwd_ssh
+for SERVER in $LIST;do
+	echo "[$SERVER]"
+    conn_ssh "${SERVER}" "${ID}"
+	exit 0
+done
+
+exit 0
