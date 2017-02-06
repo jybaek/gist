@@ -52,8 +52,9 @@ input_next_passwd_ssh()
 }
 
 chk_env
-ID="vfilter" # XXX. input your target ID
-LIST=$(whiptail --title "Checklist" --separate-output --checklist \
+ID="user_id" # XXX. input your target ID
+#LIST=$(whiptail --title "Checklist" --separate-output --checklist \
+LIST=$(dialog --title "Checklist" --separate-output --checklist \
 "Choose server" 20 60 3 \
 "192.168.0.10" "test server#1" ON \
 "192.168.0.11" "test server#2" ON \
