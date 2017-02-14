@@ -1,4 +1,4 @@
-## FrozenLake map 8x8 (e-greedy)
+## FrozenLake
 ### gif 시간 제약때문에 갱신 시간을 짧게해서 약간 눈이 아플 수 있습니다..
 
 ####4x4 map
