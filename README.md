@@ -2,6 +2,7 @@
 Program pieces.
  
 ## Summary 
+Categorized by language.
 
 * Shell script
     * [diff](diff/)
