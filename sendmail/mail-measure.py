@@ -65,15 +65,22 @@ class form(QtGui.QMainWindow):
         msg['Subject'] = str(self.ui.form_subject.text())
 
         """ from """
-        msg['From'] = str(self.ui.form_mailfrom.text())
+        ENVFrom = str(self.ui.form_mailfrom.text())
 
         """ rcpt to """
         recipients = []
         for recipient in str(self.ui.form_rcptto.text()).split(","):
             recipients.append(recipient)
+        #msg['To'] = ", ".join(recipients)
 
-        """ to """
-        msg['To'] = ", ".join(recipients)
+        """ header from/to """
+
+        if len(str(self.ui.form_headerfrom.text()).strip()) != 0:
+            msg['From'] = str(self.ui.form_headerfrom.text())
+
+        if len(str(self.ui.form_headerto.text()).strip()) != 0:
+            msg['To'] = str(self.ui.form_headerto.text())
+
 
         """ return-path """
         if len(str(self.ui.form_returnpath.text()).strip()) != 0:
@@ -98,13 +105,13 @@ class form(QtGui.QMainWindow):
         except smtplib.SMTPConnectError, e:
             print "Failure to send email: %s" % str(e)
             return 0
+
         """ ehlo """
         s.ehlo(str(self.ui.form_ehlo.text()))
         #s.starttls()
-
         """ sendmail """
         try:
-            ret = s.sendmail(msg['From'], recipients, msg.as_string())
+            ret = s.sendmail(ENVFrom, recipients, msg.as_string())
             s.quit()
         # Catch all for SMTP exceptions
         except smtplib.SMTPException, e:
