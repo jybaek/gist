@@ -7,6 +7,7 @@ Categorized by language.
 * Shell script
     * [diff](diff/)
     * [connect_ssh](connect_ssh/)
+    * [gcpconnector](gcpconnector/)
     * [change_passwd](change_passwd/)
     * [btos](btos/)
 
